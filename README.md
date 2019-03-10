@@ -1,5 +1,6 @@
 # BaseRecyclerViewAdapter
 基于MVVM的BaseRecyclerViewAdapter
+支持多类型
 
 package com.hangzhou.sz.baser.base;
 
