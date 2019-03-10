@@ -10,9 +10,9 @@ import com.hangzhou.sz.baser.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), Presenter {
-    lateinit var binding: ActivityMainBinding
-    val javaFragment:JavaFragment by lazy {JavaFragment()}
-    val kotlinFragment:KotlinFragment by lazy { KotlinFragment() }
+   private lateinit var binding: ActivityMainBinding
+   private val javaFragment:JavaFragment by lazy {JavaFragment()}
+   private val kotlinFragment:KotlinFragment by lazy { KotlinFragment() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
