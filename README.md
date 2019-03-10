@@ -2,6 +2,8 @@
 基于MVVM的BaseRecyclerViewAdapter
 支持多类型
 
+ ![image](https://github.com/tzz2015/BaseRecyclerViewAdapter/blob/master/app/src/main/java/img/20B74A8A397F4BE3AA857DD5B6C05278.jpg)
+
 package com.hangzhou.sz.baser.base;
 
 import android.support.v7.widget.RecyclerView;
