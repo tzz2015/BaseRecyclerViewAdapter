@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <data>
+      <variable
+          name="item"
+          type="com.hangzhou.sz.baser.bean.TypeBeanOne"/>
+      <variable
+          name="presenter"
+          type="com.hangzhou.sz.baser.ItemClickPresenter"/>
+  </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:layout_height="60dp">
+    <TextView
+        android:layout_centerVertical="true"
+        android:text="我是类型1"
+        android:textColor="@android:color/holo_red_dark"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="@{(view)->presenter.onItemClick(view,item)}"
+        android:layout_centerInParent="true"
+        android:text="点击"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@{item.random}"
+        android:textColor="@android:color/holo_red_dark"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+
+</layout>

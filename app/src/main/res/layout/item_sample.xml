@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="presenter"
+            type="com.hangzhou.sz.baser.Presenter"/>
+        <variable
+            name="item"
+            type="com.hangzhou.sz.baser.base.BaseRecyclerBean"/>
+    </data>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hangzhou.sz.baser.MainActivity">
+
+
+</android.support.constraint.ConstraintLayout>
+</layout>
