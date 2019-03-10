@@ -3,11 +3,9 @@ package com.hangzhou.sz.baser
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.FragmentManager
+import android.support.v4.app.Fragment
 import android.view.View
-import android.widget.Toast
 import com.hangzhou.sz.baser.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), Presenter {
    private lateinit var binding: ActivityMainBinding
@@ -22,9 +20,8 @@ class MainActivity : AppCompatActivity(), Presenter {
         supportFragmentManager.inTransaction {
             add(R.id.fl_context,kotlinFragment)
             add(R.id.fl_context,javaFragment)
-            hide(kotlinFragment)
-            show(javaFragment)
         }
+        hideShowFragment(kotlinFragment,javaFragment)
 
     }
 
@@ -34,18 +31,19 @@ class MainActivity : AppCompatActivity(), Presenter {
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.bt_java -> {
-                supportFragmentManager.inTransaction {
-                    hide(kotlinFragment)
-                    show(javaFragment)
-                }
+                hideShowFragment(kotlinFragment,javaFragment)
             }
             R.id.bt_kotlin -> {
-                supportFragmentManager.inTransaction {
-                    hide(javaFragment)
-                    show(kotlinFragment)
-                }
+               hideShowFragment(javaFragment,kotlinFragment)
             }
 
+        }
+    }
+
+    private fun hideShowFragment(hide:Fragment, show:Fragment){
+        supportFragmentManager.inTransaction {
+            hide(hide)
+            show(show)
         }
     }
 }
