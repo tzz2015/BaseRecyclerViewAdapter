@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser;
+package com.hangzhou.sz.baser.repository;
 
 import android.view.View;
 
@@ -8,5 +8,5 @@ import android.view.View;
  */
 
 public interface ItemClickPresenter {
-    void onItemClick(View v,Object t);
+    void onItemClick(View v, Object t);
 }

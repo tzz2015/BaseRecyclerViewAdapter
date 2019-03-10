@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser;
+package com.hangzhou.sz.baser.viewmodel;
 
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;

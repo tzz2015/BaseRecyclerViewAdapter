@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser;
+package com.hangzhou.sz.baser.utils;
 
 /**
  * 创建 by 刘宇飞 on 2019/3/10.

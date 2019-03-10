@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser
+package com.hangzhou.sz.baser.fragment
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -9,18 +9,21 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import com.hangzhou.sz.baser.R
 import com.hangzhou.sz.baser.adapter.TestAdapter
 import com.hangzhou.sz.baser.bean.TypeBeanOne
 import com.hangzhou.sz.baser.bean.TypeBeanTwo
 import com.hangzhou.sz.baser.databinding.LayoutRecyclerviewBinding
 import com.hangzhou.sz.baser.recyclerview.XRecyclerView
+import com.hangzhou.sz.baser.repository.ItemClickPresenter
+import com.hangzhou.sz.baser.utils.toast
+import com.hangzhou.sz.baser.viewmodel.TestViewModel
 
 /**
  * 创建 by 刘宇飞 on 2019/3/10.
  * 描述：
  */
-class KotlinFragment : Fragment(), XRecyclerView.LoadingListener, ItemClickPresenter {
+class KotlinFragment : Fragment(), XRecyclerView.LoadingListener,ItemClickPresenter {
 
 
     private lateinit var mBinding: LayoutRecyclerviewBinding

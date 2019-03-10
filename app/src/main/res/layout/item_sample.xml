@@ -3,7 +3,7 @@
     <data>
         <variable
             name="presenter"
-            type="com.hangzhou.sz.baser.Presenter"/>
+            type="com.hangzhou.sz.baser.repository.Presenter"/>
         <variable
             name="item"
             type="com.hangzhou.sz.baser.base.BaseRecyclerBean"/>

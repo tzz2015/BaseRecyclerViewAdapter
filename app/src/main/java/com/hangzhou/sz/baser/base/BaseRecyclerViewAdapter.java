@@ -4,8 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.hangzhou.sz.baser.BR;
-import com.hangzhou.sz.baser.ItemClickPresenter;
-import com.hangzhou.sz.baser.ItemLongClickPresenter;
+import com.hangzhou.sz.baser.repository.ItemClickPresenter;
+import com.hangzhou.sz.baser.repository.ItemLongClickPresenter;
 
 import java.util.ArrayList;
 import java.util.List;

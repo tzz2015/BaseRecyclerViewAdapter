@@ -1,6 +1,6 @@
 package com.hangzhou.sz.baser.bean;
 
-import com.hangzhou.sz.baser.RandomString;
+import com.hangzhou.sz.baser.utils.RandomString;
 import com.hangzhou.sz.baser.base.BaseRecyclerBean;
 
 /**

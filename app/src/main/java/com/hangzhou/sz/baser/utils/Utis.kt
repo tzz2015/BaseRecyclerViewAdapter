@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser
+package com.hangzhou.sz.baser.utils
 
 import android.content.Context
 import android.support.v4.app.FragmentManager

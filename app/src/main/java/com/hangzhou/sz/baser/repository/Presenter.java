@@ -1,4 +1,4 @@
-package com.hangzhou.sz.baser;
+package com.hangzhou.sz.baser.repository;
 
 import android.view.View;
 

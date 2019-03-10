@@ -6,7 +6,7 @@
             type="com.hangzhou.sz.baser.bean.TypeBeanTwo"/>
         <variable
             name="presenter"
-            type="com.hangzhou.sz.baser.ItemClickPresenter"/>
+            type="com.hangzhou.sz.baser.repository.ItemClickPresenter"/>
     </data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

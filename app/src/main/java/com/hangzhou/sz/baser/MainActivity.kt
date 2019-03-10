@@ -6,11 +6,15 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
 import com.hangzhou.sz.baser.databinding.ActivityMainBinding
+import com.hangzhou.sz.baser.fragment.JavaFragment
+import com.hangzhou.sz.baser.fragment.KotlinFragment
+import com.hangzhou.sz.baser.repository.Presenter
+import com.hangzhou.sz.baser.utils.inTransaction
 
-class MainActivity : AppCompatActivity(), Presenter {
+class MainActivity : AppCompatActivity(),Presenter {
    private lateinit var binding: ActivityMainBinding
-   private val javaFragment:JavaFragment by lazy {JavaFragment()}
-   private val kotlinFragment:KotlinFragment by lazy { KotlinFragment() }
+   private val javaFragment: JavaFragment by lazy { JavaFragment() }
+   private val kotlinFragment: KotlinFragment by lazy { KotlinFragment() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
