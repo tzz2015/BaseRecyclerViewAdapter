@@ -7,4 +7,11 @@ package com.hangzhou.sz.baser.base;
 
 public class BaseRecyclerBean {
     public int viewType=1;
+    private String letters;//显示拼音的首字母
+    public String getLetters() {
+        return letters;
+    }
+    public void setLetters(String letters) {
+        this.letters = letters;
+    }
 }

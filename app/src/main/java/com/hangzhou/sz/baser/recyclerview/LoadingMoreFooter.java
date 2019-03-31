@@ -61,10 +61,11 @@ public class LoadingMoreFooter extends LinearLayout {
                 if (!mAnimationDrawable.isRunning()) {
                     mAnimationDrawable.start();
                 }
-              //  mIvProgress.setVisibility(View.VISIBLE);
+                mIvProgress.setVisibility(View.VISIBLE);
                 mText.setText("努力加载中...");
                 llHave.setVisibility(VISIBLE);
                 this.setVisibility(View.VISIBLE);
+                llNomore.setVisibility(GONE);
                 break;
             case STATE_COMPLETE:
                 if (mAnimationDrawable.isRunning()) {
@@ -72,16 +73,19 @@ public class LoadingMoreFooter extends LinearLayout {
                 }
                 mText.setText("努力加载中...");
                 this.setVisibility(View.GONE);
+                llNomore.setVisibility(GONE);
                 break;
             case STATE_NOMORE:
                 if (mAnimationDrawable.isRunning()) {
                     mAnimationDrawable.stop();
                 }
-              //  mText.setText(getContext().getText(R.string.nomore_loading));
+                mText.setText(getContext().getText(R.string.nomore_loading));
                 llHave.setVisibility(GONE);
                 llNomore.setVisibility(VISIBLE);
                 mIvProgress.setVisibility(View.GONE);
                 this.setVisibility(View.VISIBLE);
+                break;
+            default:
                 break;
         }
     }

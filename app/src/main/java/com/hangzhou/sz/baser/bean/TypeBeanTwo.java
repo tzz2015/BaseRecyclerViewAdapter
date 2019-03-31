@@ -10,9 +10,11 @@ import com.hangzhou.sz.baser.base.BaseRecyclerBean;
 
 public class TypeBeanTwo extends BaseRecyclerBean {
     public int index;
-    public String random= RandomString.getRandomString(5);
+    public String random= RandomString.getRandomWord()+RandomString.getRandomString(5);
 
     public TypeBeanTwo(int index) {
         this.index = index;
     }
+
+
 }

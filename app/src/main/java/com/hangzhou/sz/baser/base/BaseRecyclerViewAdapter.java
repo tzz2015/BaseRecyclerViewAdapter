@@ -6,6 +6,7 @@ import android.view.View;
 import com.hangzhou.sz.baser.BR;
 import com.hangzhou.sz.baser.repository.ItemClickPresenter;
 import com.hangzhou.sz.baser.repository.ItemLongClickPresenter;
+import com.hangzhou.sz.baser.utils.PinyinComparator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,9 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
     private List<BaseRecyclerBean> data = new ArrayList<>();
     private ItemClickPresenter itemPresenter;
     private ItemLongClickPresenter itemLongClickPresenter;
-    private int type = 1; // 1:整个item点击事件 2：布局点个控件点击事件 需要在布局绑定点击事件
+    // 1:整个item点击事件 2：布局点个控件点击事件 需要在布局绑定点击事件
+    private int type = 1;
+
 
     @Override
     public void onBindViewHolder(BaseRecyclerViewHolder holder, final int position) {
@@ -81,6 +84,8 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
         notifyDataSetChanged();
     }
 
+
+
     public void add(BaseRecyclerBean object) {
         data.add(object);
     }
@@ -106,4 +111,7 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
         notifyDataSetChanged();
     }
 
+    public List<BaseRecyclerBean> getData() {
+        return data;
+    }
 }

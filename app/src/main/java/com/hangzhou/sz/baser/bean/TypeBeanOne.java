@@ -10,7 +10,7 @@ import com.hangzhou.sz.baser.base.BaseRecyclerBean;
 
 public class TypeBeanOne extends BaseRecyclerBean {
     public int index;
-    public String random= RandomString.getRandomString(4);
+    public String random= RandomString.getRandomWord()+RandomString.getRandomString(4);
 
     public TypeBeanOne(int index) {
         this.index = index;

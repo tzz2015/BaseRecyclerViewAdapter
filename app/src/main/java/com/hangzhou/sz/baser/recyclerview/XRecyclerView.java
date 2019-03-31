@@ -156,6 +156,13 @@ public class XRecyclerView extends RecyclerView {
 
     }
 
+    public boolean isHeadView(int position){
+       return mWrapAdapter.isHeader(position);
+    }
+    public int getHeadSize(){
+        return mHeaderViews.size();
+    }
+
     @Override
     public void onScrollStateChanged(int state) {
         super.onScrollStateChanged(state);
