@@ -27,19 +27,20 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
     @Override
     public void onBindViewHolder(BaseRecyclerViewHolder holder, final int position) {
         holder.binding.setVariable(BR.item, data.get(position));
-        holder.onBaseBindViewHolder(data.get(position),position);
+        holder.onBaseBindViewHolder(data.get(position), position);
         if (itemPresenter != null) {
-            if (type == 2)
+            if (type == 2) {
                 holder.binding.setVariable(BR.presenter, itemPresenter);
-            else
+            } else {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         itemPresenter.onItemClick(v, data.get(position));
                     }
                 });
+            }
         }
-        if(itemLongClickPresenter!=null){
+        if (itemLongClickPresenter != null) {
             holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -63,8 +64,8 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
     /**
      * 长按事件
      */
-    public void setItemLongClickPresenter(ItemLongClickPresenter itemLongClickPresenter){
-        this.itemLongClickPresenter=itemLongClickPresenter;
+    public void setItemLongClickPresenter(ItemLongClickPresenter itemLongClickPresenter) {
+        this.itemLongClickPresenter = itemLongClickPresenter;
     }
 
     @Override
@@ -84,7 +85,6 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
         this.data.addAll(data);
         notifyDataSetChanged();
     }
-
 
 
     public void add(BaseRecyclerBean object) {

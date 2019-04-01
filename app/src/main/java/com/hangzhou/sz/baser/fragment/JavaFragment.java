@@ -60,8 +60,12 @@ public class JavaFragment extends Fragment implements XRecyclerView.LoadingListe
             public void onChanged(@Nullable List<BaseRecyclerBean> baseRecyclerBeans) {
                 mBinding.rvList.refreshComplete();
                 int page = viewModel.getPage();
-                if (page == 1)
+                if (page == 1) {
                     mAdapter.clear();
+                }
+                if (page > 3) {
+                    mBinding.rvList.noMoreLoading();
+                }
                 mAdapter.addAll(baseRecyclerBeans);
             }
         });
