@@ -27,6 +27,7 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
     @Override
     public void onBindViewHolder(BaseRecyclerViewHolder holder, final int position) {
         holder.binding.setVariable(BR.item, data.get(position));
+        holder.onBaseBindViewHolder(data.get(position),position);
         if (itemPresenter != null) {
             if (type == 2)
                 holder.binding.setVariable(BR.presenter, itemPresenter);
@@ -114,4 +115,14 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
     public List<BaseRecyclerBean> getData() {
         return data;
     }
+
+
+    /**
+     * 判断该position对应的位置是要固定
+     *
+     * @param position adapter position
+     * @return true or false
+     */
+    public abstract boolean isPinnedPosition(int position);
+
 }

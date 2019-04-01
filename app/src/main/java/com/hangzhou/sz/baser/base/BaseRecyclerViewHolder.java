@@ -22,6 +22,7 @@ public abstract class BaseRecyclerViewHolder< D extends ViewDataBinding,T extend
         // 得到这个View绑定的Binding
         binding = DataBindingUtil.getBinding(this.itemView);
     }
+
     /**
      * @param t   绑定的数据
      * @param position 数据索引
