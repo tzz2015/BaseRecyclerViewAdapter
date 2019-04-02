@@ -17,8 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="12dp"
-            android:paddingTop="12dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="16sp"
             tools:text="2016-12-28 04:13:11" />

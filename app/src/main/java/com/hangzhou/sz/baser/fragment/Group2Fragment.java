@@ -4,7 +4,9 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +57,7 @@ public class Group2Fragment extends Fragment implements ItemClickPresenter, XRec
         // 点击对应的按钮生效
         mAdapter.setItemPresenter(this, 1);
         mBinding.rvList.addItemDecoration(new XPinnedHeaderItemDecoration());
+        mBinding.rvList.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
         initData();
 
     }
