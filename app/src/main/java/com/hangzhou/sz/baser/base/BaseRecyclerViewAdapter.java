@@ -123,6 +123,8 @@ public abstract class BaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseR
      * @param position adapter position
      * @return true or false
      */
-    public abstract boolean isPinnedPosition(int position);
+    public  boolean isPinnedPosition(int position){
+        return false;
+    }
 
 }
