@@ -15,7 +15,6 @@
     <Button
         android:id="@+id/bt_java"
         android:text="Java实现"
-        android:layout_marginLeft="30dp"
         android:onClick="@{presenter::onClick}"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="wrap_content"
@@ -24,7 +23,6 @@
         android:onClick="@{presenter::onClick}"
         android:id="@+id/bt_kotlin"
         android:text="kotlin实现"
-        android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toRightOf="@+id/bt_java"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -32,8 +30,14 @@
         android:onClick="@{presenter::onClick}"
         android:id="@+id/bt_group"
         android:text="分组列表"
-        android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toRightOf="@+id/bt_kotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="@{presenter::onClick}"
+        android:id="@+id/bt_group2"
+        android:text="分组列表2"
+        app:layout_constraintLeft_toRightOf="@+id/bt_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <FrameLayout

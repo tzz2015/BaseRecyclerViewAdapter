@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
-import android.widget.Toast
 import com.hangzhou.sz.baser.databinding.ActivityMainBinding
+import com.hangzhou.sz.baser.fragment.Group2Fragment
 import com.hangzhou.sz.baser.fragment.GroupFragment
 import com.hangzhou.sz.baser.fragment.JavaFragment
 import com.hangzhou.sz.baser.fragment.KotlinFragment
@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity(), Presenter {
     private val javaFragment: JavaFragment by lazy { JavaFragment() }
     private val kotlinFragment: KotlinFragment by lazy { KotlinFragment() }
     private val groupFragment: GroupFragment by lazy { GroupFragment() }
-    private lateinit var mCurorFragment:Fragment
+    private val group2Fragment: Group2Fragment by lazy { Group2Fragment() }
+    private lateinit var mCurorFragment: Fragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity(), Presenter {
             add(R.id.fl_context, javaFragment)
             add(R.id.fl_context, groupFragment)
             hide(groupFragment)
+            add(R.id.fl_context,group2Fragment)
+            hide(group2Fragment)
         }
         hideShowFragment(kotlinFragment, javaFragment)
 
@@ -50,6 +53,9 @@ class MainActivity : AppCompatActivity(), Presenter {
             R.id.bt_group -> {
                 hideShowFragment(mCurorFragment, groupFragment)
             }
+            R.id.bt_group2 -> {
+                hideShowFragment(mCurorFragment, group2Fragment)
+            }
 
         }
     }
@@ -59,6 +65,6 @@ class MainActivity : AppCompatActivity(), Presenter {
             hide(hide)
             show(show)
         }
-        mCurorFragment=show
+        mCurorFragment = show
     }
 }

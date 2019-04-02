@@ -65,6 +65,12 @@ public class WrapAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public boolean isHeader(int position) {
         return position >= 0 && position < mHeaderViews.size();
     }
+    /**
+     * 获取适配器
+     */
+    public RecyclerView.Adapter getAdapter(){
+        return adapter;
+    }
 
     /**
      * 是否为底布局
